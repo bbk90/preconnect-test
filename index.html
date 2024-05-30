@@ -6,8 +6,8 @@
     <title>Link Preconnect Example</title>
 
     <!-- Preconnect to Google Fonts -->
-    <!-- <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin /> -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <!-- Load Google Font -->
     <link
       href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Open+Sans"
@@ -15,10 +15,32 @@
     />
     <!-- CSS File -->
     <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdnapisec.kaltura.com/p/2748741/embedPlaykitJs/uiconf_id/50272542"></script>
   </head>
   <body>
-    <h1 class="title">Hello, World!</h1>
-    <p class="subtitle">This is a demonstration of link preconnect.</p>
+    <main>
+      <h1 class="title">Hello, World!</h1>
+      <p class="subtitle">This is a demonstration of link preconnect.</p>
+      <div id="kalturaPlayer"></div>
+    </main>
+    <script type="text/javascript">
+      try {
+        let kalturaPlayer = KalturaPlayer.setup({
+          targetId: "kalturaPlayer",
+          provider: {
+            partnerId: "2748741",
+            uiConfId: "50272542",
+          },
+          playback: {
+            autoplay: true,
+          },
+        });
+        kalturaPlayer.loadMedia({ entryId: "1_ubg28z0w" });
+      } catch (e) {
+        console.error(e.message);
+      }
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
