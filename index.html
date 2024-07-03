@@ -5,36 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Link Preconnect Example</title>
 
-    <!-- Preconnect to Google Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <!-- Load Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Open+Sans"
-      rel="stylesheet"
-    />
-
-    <!-- Preconnect to Kaltura -->
-    <link href="https://cdnapisec.kaltura.com" rel="preconnect" crossorigin />
-
-    <link href="https://imasdk.googleapis.com" rel="preconnect" />
-
-    <link
-      href="https://securepubads.g.doubleclick.net"
-      rel="preconnect"
-      crossorigin
-    />
-
-    <link href="https://s0.2mdn.net" rel="preconnect" />
-
-    <!-- Taboola Loader -->
-    <link href="https://cdn.taboola.com/libtrc" rel="preconnect" crossorigin />
-    <script src="https://cdn.taboola.com/libtrc/reshet-reshet/loader.js"></script>
-
     <!-- CSS File -->
     <link rel="stylesheet" href="styles.css" />
-
-    <script src="https://cdnapisec.kaltura.com/p/2748741/embedPlaykitJs/uiconf_id/50272542"></script>
   </head>
   <body>
     <main>
@@ -43,21 +15,21 @@
       <div id="kalturaPlayer"></div>
     </main>
     <script type="text/javascript">
-      try {
-        let kalturaPlayer = KalturaPlayer.setup({
-          targetId: "kalturaPlayer",
-          provider: {
-            partnerId: "2748741",
-            uiConfId: "50272542",
-          },
-          playback: {
-            autoplay: true,
-          },
-        });
-        kalturaPlayer.loadMedia({ entryId: "1_ubg28z0w" });
-      } catch (e) {
-        console.error(e.message);
-      }
+      // try {
+      //   let kalturaPlayer = KalturaPlayer.setup({
+      //     targetId: "kalturaPlayer",
+      //     provider: {
+      //       partnerId: "2748741",
+      //       uiConfId: "50272542",
+      //     },
+      //     playback: {
+      //       autoplay: true,
+      //     },
+      //   });
+      //   kalturaPlayer.loadMedia({ entryId: "1_ubg28z0w" });
+      // } catch (e) {
+      //   console.error(e.message);
+      // }
     </script>
     <script src="main.js"></script>
   </body>
