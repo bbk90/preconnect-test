@@ -4,14 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Link Preconnect Example</title>
-    <!-- Load Google Font -->
+    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Open+Sans"
       rel="stylesheet"
     />
+    <!-- Google Font -->
+
+    <!-- Kaltura -->
+    <script src="https://cdnapisec.kaltura.com/p/2748741/embedPlaykitJs/uiconf_id/50272542"></script>
+    <!-- Kaltura -->
 
     <!-- CSS File -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- CSS File -->
   </head>
   <body>
     <main>
@@ -20,21 +26,21 @@
       <div id="kalturaPlayer"></div>
     </main>
     <script type="text/javascript">
-      // try {
-      //   let kalturaPlayer = KalturaPlayer.setup({
-      //     targetId: "kalturaPlayer",
-      //     provider: {
-      //       partnerId: "2748741",
-      //       uiConfId: "50272542",
-      //     },
-      //     playback: {
-      //       autoplay: true,
-      //     },
-      //   });
-      //   kalturaPlayer.loadMedia({ entryId: "1_ubg28z0w" });
-      // } catch (e) {
-      //   console.error(e.message);
-      // }
+      try {
+        let kalturaPlayer = KalturaPlayer.setup({
+          targetId: "kalturaPlayer",
+          provider: {
+            partnerId: "2748741",
+            uiConfId: "50272542",
+          },
+          playback: {
+            autoplay: true,
+          },
+        });
+        kalturaPlayer.loadMedia({ entryId: "1_ubg28z0w" });
+      } catch (e) {
+        console.error(e.message);
+      }
     </script>
     <script src="main.js"></script>
   </body>
